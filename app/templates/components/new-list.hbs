@@ -1,0 +1,10 @@
+<form class="question">
+  <label for="author">Name: </label>
+  {{input type="text" id="author" value=author placeholder="your name"}}
+  <label for="date">date: </label>
+  {{input type="text" id="date" value=date placeholder="MM/DD/HH"}}
+  <br>
+  <label for="question">Question: </label>
+  {{textarea class="form-control" id="question" rows="3" value=question placeholder="Type your question here ..."}}
+  <button {{action 'save'}} class="btn btn-primary btn-block">post your question</button>
+</form>

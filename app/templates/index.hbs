@@ -1,18 +1,8 @@
-<div class="question">
-  <label for="author">Name: </label>
-  <input type="text" id="author" value="author" placeholder="your name">
-  <label for="date">date: </label>
-  <input type="text" id="date" value="date" placeholder="MM/DD/HH">
-  <br>
-  <label for="question">Question: </label>
-  <textarea class="form-control" id="question" rows="3" value="question" placeholder="Type your question here ..."></textarea>
-</div>
+{{new-list save="save"}}
 <div class="row">
   <div class="col-xs-6 col-lg-4 answers">
-    {{#each model as |list|}}
-      <h2>{{list.author}}</h2>
-      <p>{{list.question}} </p>
-      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    {{#each model.lists as |list|}}
+      {{list-tile list=list destroyList="destroyList"}}
     {{/each}}
   </div>
 </div>

@@ -10,5 +10,15 @@
     "author": "Britney Mason",
     "date": "05/03/16",
     "question": "Who was at the top of Forbes 2015 list of the richest people in the world?"
-  }]
+  }],
+  "answers": [{
+    "answerAuthor": "Andy Karson",
+    "statement": "Cleveland Browns, Detroit Lions, Houston Texans and Jacksonville Jaguars"
+  },{
+    "answerAuthor": "Susan Steven",
+    "statement": "Bill Gates"
+  }, {
+    "answerAuthor": "Megan MacDonald",
+    "statement": "French"
+    }]
 }

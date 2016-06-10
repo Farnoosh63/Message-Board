@@ -3,8 +3,7 @@ import DS from 'ember-data';
 // import { belongsTo, hasMany } from 'ember-data/relationships';
 
 export default DS.Model.extend({
-  author: DS.attr(),
-  date: DS.attr(),
-  question: DS.attr(),
-  answers: DS.hasMany('answer', {async: true})
+  answerAuthor: DS.attr(),
+  statement: DS.attr(),
+  list: DS.belongsTo('list', {async: true})
 });
