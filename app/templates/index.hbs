@@ -2,10 +2,10 @@
 <div class="row">
   <div class="col-xs-6 col-lg-4 answers">
     {{#each model.lists as |list|}}
-      {{#link-to 'list' list.id}}<h2>{{list.author}}</h2>{{/link-to}}
+    {{#link-to 'list' list.id}}<h2>{{list.author}}</h2>{{/link-to}}
     <p>{{list.question}} </p>
-    <!-- <p><a class="btn btn-default" {{action 'viewDetails'}} role="button">View details &raquo;</a></p> -->
     <button class="btn btn-danger" {{action 'delete' list}}>Delete</button>
+    {{edit-list list=list editList="editList"}}
     {{/each}}
   </div>
 </div>

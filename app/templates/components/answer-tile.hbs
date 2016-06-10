@@ -1,3 +1,5 @@
-<h2>{{answer.answerAuthor}}</h2>
-<p>{{answer.statement}} </p>
-<button class="btn btn-danger" {{action 'delete' answer}}>Delete this answer</button>
+<div class="blog-post">
+  <p class="blog-post-title">{{answer.statement}}</p>
+  <p class="blog-post-meta">By: {{answer.answerAuthor}}</p>
+  <button class="btn btn-danger" {{action 'delete' answer}}>Delete this answer</button>
+</div>

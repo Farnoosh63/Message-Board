@@ -6,7 +6,8 @@ actions: {
   save(){
     var params= {
       answerAuthor: this.get('answerAuthor'),
-      statement: this.get('statement')
+      statement: this.get('statement'),
+      list: this.get('list')
     };
     this.sendAction('save', params);
     }

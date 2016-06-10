@@ -13,6 +13,15 @@ export default Ember.Route.extend({
         return list.save();
       });
       this.transitionTo('list', params.list);
+    },
+    editList(list, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          list.set(key, params[key]);
+        }
+      });
+      list.save();
+      this.transitionTo('index');
     }
   }
 });

@@ -6,16 +6,17 @@
           <p class="blog-post-meta">Date: {{model.date}}</p>
           <p>{{model.question}}</p>
         </div>
-
+        <hr>
+        <h4>You know the answer? Go ahead and submit your answer below</h4>
+        {{new-answer save="save" list=model}}
         <div class="col-xs-6 col-lg-4 answers">
-          <h2>Answers: </h2>
+          <h2>Available answers: </h2>
           {{#each model.answers as |answer|}}
-          <blockquote>{{answer-tile answer=answer}}</blockquote>
+            <blockquote>{{answer-tile answer=answer}}</blockquote>
           {{/each}}
 
         </div>
       </div>
     </div>
   </section>
-  {{new-answer save=save list=model}}
 <!-- {{list-tile list=model destroyList="destroyList"}} -->

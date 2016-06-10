@@ -10,7 +10,13 @@ export default Ember.Route.extend({
   actions: {
     delete(list){
       if (confirm('Are you sure you want to delete this question?')) {
-        list.destroyRecord();
+        var list_deletions = list.get('answers').map(function(answer) {
+          return answer.destroyRecord();
+        });
+        Ember.RSVP.all(list_deletions).then(function() {
+          return list.destroyRecord();
+        });
+        this.transitionTo('index');
       }
 
     },
@@ -18,7 +24,16 @@ export default Ember.Route.extend({
       var newQuestion = this.store.createRecord('list', params);
       newQuestion.save();
       this.transitionTo('index');
-    }
+    },
 
+    editList(list, params) {
+      Object.keys(params).forEach(function(key) {
+        if(params[key]!==undefined) {
+          list.set(key, params[key]);
+        }
+      });
+      list.save();
+      this.transitionTo('index');
+    }
   }
 });

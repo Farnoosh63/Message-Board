@@ -1,0 +1,17 @@
+{{#if editQuestion}}
+<form class="editbutton">
+  <label for="author">Name: </label>
+  {{input type="text" id="author" value=author placeholder=list.author}}
+  <label for="date">date: </label>
+  {{input type="text" id="date" value=date placeholder=list.date}}
+  <br>
+  <label for="question">Question: </label>
+  {{textarea class="form-control" id="question" rows="3" value=question placeholder="Type your question here, otherwise existing question will be replaced.."}}
+  <button {{action 'save' list}} class="btn btn-primary ">Edit your question</button>
+  <button {{action 'editQuestionFormHide'}} class="btn btn-warning">cancle edit form</button>
+</form>
+{{else}}
+<form class="editbutton">
+  <button {{action 'editQuestionFormShow'}} class="btn btn-warning">Edit your question</button>
+</form>
+{{/if}}
