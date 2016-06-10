@@ -1,7 +1,7 @@
 # Message-board
 **By Farnoosh Johnson**
 #### _Epicodus JavaScript class, June 2016_
-###### _[Angular JS](https://www.learnhowtoprogram.com/javascript/ember-js/ember-independent-project)_
+###### _[Ember JS](https://www.learnhowtoprogram.com/javascript/ember-js/ember-independent-project)_
 ###### **Message Board, code review number 3**
 
 ## __Description__
@@ -22,7 +22,7 @@ You will need the following things properly installed on your computer.
 
 ## Installation
 
-* `git clone <[farnoosh63](https://github.com/Farnoosh63/Meal-Tracker.git)>` this repository
+* `git clone [farnoosh63](https://github.com/Farnoosh63/Meal-Tracker.git)` this repository
 * change into the new directory
 * `npm install`
 * `bower install`
@@ -58,7 +58,7 @@ The contact form wont save the user information into the database.
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
 
-  Legal
+Legal
 ------
 
 _*Copyright (c) 2016 Farnoosh Johnson- Student in Epicodus*_
