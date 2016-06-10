@@ -1,12 +1,21 @@
-<h1>welcome to list.hbs</h1>
-{{model.author}}
-{{model.date}}
-{{model.question}}
+<section id="services">
+  <div class="container">
+    <div class="row">
+        <div class="blog-post">
+          <h2 class="blog-post-title">{{model.author}}</h2>
+          <p class="blog-post-meta">Date: {{model.date}}</p>
+          <p>{{model.question}}</p>
+        </div>
 
-<h2>Answers: </h2>
-{{#each model.answers as |answer|}}
-  {{answer-tile answer=answer}}
-{{/each}}
+        <div class="col-xs-6 col-lg-4 answers">
+          <h2>Answers: </h2>
+          {{#each model.answers as |answer|}}
+          <blockquote>{{answer-tile answer=answer}}</blockquote>
+          {{/each}}
 
-{{new-answer save=save list=model}}
-{{list-tile list=model destroyList="destroyList"}}
+        </div>
+      </div>
+    </div>
+  </section>
+  {{new-answer save=save list=model}}
+<!-- {{list-tile list=model destroyList="destroyList"}} -->

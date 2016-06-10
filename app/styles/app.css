@@ -37,6 +37,9 @@ legend {
 .answers {
   margin-top: 5%;
 }
+.blog-post-meta {
+  color: #999;
+}
 body {
   overflow-x: hidden;
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -257,7 +260,7 @@ fieldset[disabled] .btn-xl.active {
   }
 }
 header {
-  background-image: url('images/header-bg.jpg');
+  background-image: url('images/img1.jpg');
   background-repeat: none;
   background-attachment: scroll;
   background-position: center center;
