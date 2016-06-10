@@ -9,8 +9,10 @@
 </div>
 <div class="row">
   <div class="col-xs-6 col-lg-4 answers">
-    <h2>{{author}}</h2>
-    <p>{{question}} </p>
-    <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-  </div><!--/.col-xs-6.col-lg-4-->
-</div><!--/row-->
+    {{#each model as |list|}}
+      <h2>{{list.author}}</h2>
+      <p>{{list.question}} </p>
+      <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
+    {{/each}}
+  </div>
+</div>
