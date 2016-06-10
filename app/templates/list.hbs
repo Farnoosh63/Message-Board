@@ -1,0 +1,12 @@
+<h1>welcome to list.hbs</h1>
+{{model.author}}
+{{model.date}}
+{{model.question}}
+
+<h2>Answers: </h2>
+{{#each model.answers as |answer|}}
+  {{answer-tile answer=answer}}
+{{/each}}
+
+{{new-answer save=save list=model}}
+{{list-tile list=model destroyList="destroyList"}}

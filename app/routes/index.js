@@ -15,6 +15,11 @@ export default Ember.Route.extend({
       var newQuestion = this.store.createRecord('list', params);
       newQuestion.save();
       this.transitionTo('index');
+    },
+    delete(list) {
+      if (confirm('Are you sure you want to delete this question?')) {
+        this.sendAction('destroyList', list);
+      }
     }
   }
 });
