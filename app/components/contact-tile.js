@@ -5,6 +5,7 @@ export default Ember.Component.extend({
   actions: {
     contactSuccess() {
       this.set("contactSend", true);
+      // this is where you would send your save action upwards to the route handler
     }
   }
 });
