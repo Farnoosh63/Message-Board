@@ -13,7 +13,7 @@ export default Ember.Component.extend({
     save(list){
       var params = {
         author: this.get('author'),
-        date: this.get('date'),
+        // inputtedDate: this.get('inputtedDate'),
         question: this.get('question'),
       };
       this.set('editQuestion', false);

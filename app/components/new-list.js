@@ -5,7 +5,7 @@ export default Ember.Component.extend({
     save() {
       var params = {
         author: this.get('author'),
-        date: this.get('date'),
+        // inputtedDate: this.get('inputtedDate'),
         question: this.get('question'),
       };
       this.sendAction('save', params);

@@ -7,7 +7,7 @@
     <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <input  name="first_name" placeholder="First Name" class="form-control"  type="text">
+        {{input id="name" value=name placeholder="First Name" class="form-control"  type="text"}}
       </div>
     </div>
   </div>
@@ -17,7 +17,7 @@
     <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-        <input name="last_name" placeholder="Last Name" class="form-control"  type="text">
+        {{input id="lastName" value=lastName placeholder="Last Name" class="form-control"  type="text"}}
       </div>
     </div>
   </div>
@@ -27,7 +27,7 @@
     <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-        <input name="email" placeholder="E-Mail Address" class="form-control"  type="text">
+        {{input id="email" value=email placeholder="E-Mail Address" class="form-control"  type="text"}}
       </div>
     </div>
   </div>
@@ -37,7 +37,7 @@
     <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-        <input name="phone" placeholder="(845)555-1212" class="form-control" type="text">
+        {{input id="phone" value=phone placeholder="(845)555-1212" class="form-control" type="text"}}
       </div>
     </div>
   </div>
@@ -47,27 +47,27 @@
     <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-        <input name="address" placeholder="Address" class="form-control" type="text">
+        {{input id="address" value= address placeholder="Address" class="form-control" type="text"}}
       </div>
     </div>
   </div>
 
   <div class="form-group">
-    <label class="col-md-4 control-label">City</label>
+    <label class="col-md-4 control-label">City/State</label>
     <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-        <input name="city" placeholder="city" class="form-control"  type="text">
+        {{input id="city" value=city placeholder="city/State" class="form-control"  type="text"}}
       </div>
     </div>
   </div>
-
+<!--
   <div class="form-group">
     <label class="col-md-4 control-label">State</label>
     <div class="col-md-4 selectContainer">
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-        <select name="state" class="form-control selectpicker" >
+        <select id="state" class="form-control selectpicker" >
           <option value=" " >Please select your state</option>
           <option>Alabama</option>
           <option>Alaska</option>
@@ -123,14 +123,14 @@
         </select>
       </div>
     </div>
-  </div>
+  </div> -->
 
   <div class="form-group">
     <label class="col-md-4 control-label">Zip Code</label>
     <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-        <input name="zip" placeholder="Zip Code" class="form-control"  type="text">
+        {{input id="zip" value=zip placeholder="Zip Code" class="form-control" type="text"}}
       </div>
     </div>
   </div>
@@ -141,34 +141,18 @@
     <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
-        <input name="website" placeholder="Website or domain name" class="form-control" type="text">
+        {{input id="website" value= website placeholder="Website or domain name" class="form-control" type="text"}}
       </div>
     </div>
   </div>
 
-
-  <div class="form-group">
-    <label class="col-md-4 control-label">Do you have hosting?</label>
-    <div class="col-md-4">
-      <div class="radio">
-        <label>
-          <input type="radio" name="hosting" value="yes" /> Yes
-        </label>
-      </div>
-      <div class="radio">
-        <label>
-          <input type="radio" name="hosting" value="no" /> No
-        </label>
-      </div>
-    </div>
-  </div>
 
   <div class="form-group">
     <label class="col-md-4 control-label">Message</label>
     <div class="col-md-4 inputGroupContainer">
       <div class="input-group">
         <span class="input-group-addon"><i class="glyphicon glyphicon-pencil"></i></span>
-        <textarea class="form-control" name="comment" placeholder="Please type your message ..."></textarea>
+        {{textarea class="form-control" id="comment" value=comment placeholder="Please type your message ..."}}
       </div>
     </div>
   </div>
@@ -177,7 +161,7 @@
   <div class="form-group">
     <label class="col-md-4 control-label"></label>
     <div class="col-md-4">
-      <button class="btn btn-warning" {{action "contactSuccess"}} >Send <span class="glyphicon glyphicon-send"></span></button>
+      <button class="btn btn-warning" {{action "saveContact"}} >Send <span class="glyphicon glyphicon-send"></span></button>
     </div>
   </div>
 

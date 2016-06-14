@@ -34,6 +34,11 @@ export default Ember.Route.extend({
       });
       list.save();
       this.transitionTo('index');
+    },
+    saveContact(contactParams){
+      var newContact = this.store.createRecord('contact', contactParams);
+      newContact.save();
+      this.transitionTo('contact');
     }
   }
 });
