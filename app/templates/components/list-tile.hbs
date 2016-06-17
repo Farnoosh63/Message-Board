@@ -1,0 +1,5 @@
+{{#link-to 'list' list.id}}<h2>{{list.author}}</h2>{{/link-to}}
+<p>{{list.question}} </p>
+<button class="btn btn-danger" {{action 'delete' list}}>Delete</button>
+{{edit-list list=list editList="editList"}}
+<button {{action 'addToFav' list}}>Add to Favorite</button>
