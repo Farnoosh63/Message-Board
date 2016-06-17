@@ -1,5 +1,10 @@
 {{#link-to 'list' list.id}}<h2>{{list.author}}</h2>{{/link-to}}
+{{list-popularity list}}
+<br><br>
 <p>{{list.question}} </p>
+<small class="blog-post-meta">number of answers: {{numberOfAnswers}}</small>
+<br>
 <button class="btn btn-danger" {{action 'delete' list}}>Delete</button>
 {{edit-list list=list editList="editList"}}
-<button {{action 'addToFav' list}}>Add to Favorite</button>
+<br>
+<button {{action 'addToFav' list}} class="btn btn-success" >Add to Favorite</button>
