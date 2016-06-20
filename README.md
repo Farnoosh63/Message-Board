@@ -7,6 +7,7 @@
 ## __Description__
 
 ###### This is an online discussion site where people can post questions, edit and delete their questions and submit answer to each questions posted.
+[demo the App](http://farnoosh63.github.io/Message-Board/)
 
 > You may use this application as an example to show the proficiency of a level 2 student in Epicodus.
 
